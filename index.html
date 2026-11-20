@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWNNext SRS Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="doc-header">
+        <div class="header-left">
+            <span class="brand-name">BWNNext</span>
+            <span class="brand-sub">AI Business Matching & Networking</span>
+        </div>
+        <div class="header-right">
+            <span class="page-number">Page 3</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="content-container">
+        
+        <!-- Section Title Banner -->
+        <h1 class="section-title">1. INTRODUCTION</h1>
+
+        <!-- 1.1 Purpose Section -->
+        <section class="doc-section">
+            <h2 class="section-subtitle">1.1 Purpose</h2>
+            <p class="section-text">
+                BWNNext (Business World Networking Next) is an AI-powered business growth platform developed by OZOCO Global Pvt Ltd. The platform enables business owners, freelancers, and entrepreneurs to discover smart connections, receive verified leads, and access real business opportunities through an intelligent matching engine.
+            </p>
+        </section>
+
+        <!-- 1.2 Product Overview Section -->
+        <section class="doc-section">
+            <h2 class="section-subtitle">1.2 Product Overview</h2>
+            <table class="overview-table">
+                <tr>
+                    <td class="table-label">Product Name</td>
+                    <td class="table-value">BWNNext – Business World Networking</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Company</td>
+                    <td class="table-value">OZOCO Global Pvt Ltd</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Tagline</td>
+                    <td class="table-value">AI Business Matching & Networking</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Platform</td>
+                    <td class="table-value">Android, iOS, Web</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Version</td>
+                    <td class="table-value">1.0</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Document Type</td>
+                    <td class="table-value">Software Requirements Specification (SRS)</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Prepared For</td>
+                    <td class="table-value">Development Team</td>
+                </tr>
+                <tr>
+                    <td class="table-label">Status</td>
+                    <td class="table-value">Draft – Confidential</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 1.3 Scope Section -->
+        <section class="doc-section">
+            <h2 class="section-subtitle">1.3 Scope</h2>
+            <p class="section-text">The system comprises three components:</p>
+            <ul class="scope-list">
+                <li>Mobile App — Flutter (Android + iOS)</li>
+                <li>Web App — React.js (Responsive Browser)</li>
+                <li>Admin Panel — React.js + Node.js</li>
+            </ul>
+        </section>
+
+    <!-- Section Title Banner -->
+<h1 class="section-title">2. USER ROLES</h1>
+
+<!-- 2.0 User Roles Table Section -->
+<section class="doc-section">
+    <table class="roles-table">
+        <thead>
+            <tr>
+                <th class="table-header">Role</th>
+                <th class="table-header">Description</th>
+                <th class="table-header">Access Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="role-name">Business Partner</td>
+                <td class="role-desc">Business owner / Freelancer / Entrepreneur who registers on the platform to network, post leads, and connect with others.</td>
+                <td class="role-access">Standard User</td>
+            </tr>
+            <tr>
+                <td class="role-name">Admin</td>
+                <td class="role-desc">OZOCO platform manager who oversees users, leads, payments, and analytics.</td>
+                <td class="role-access">Full Access</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+        <!-- Section Title Banner -->
+        <h1 class="section-title">3. USER MODULES</h1>
+
+        <!-- 3.1 Registration & Login Section -->
+        <section class="doc-section">
+            <h2 class="section-subtitle">3.1 Registration & Login</h2>
+            
+            <h3 class="section-accent-title">Supported Authentication Methods:</h3>
+            <table class="modules-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Flow</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-method">Mobile OTP</td>
+                        <td>Enter mobile &rarr; Receive OTP via SMS (Twilio) &rarr; Verify &rarr; Account created</td>
+                        <td>Primary method</td>
+                    </tr>
+                    <tr>
+                        <td class="col-method">Email + Password</td>
+                        <td>Enter email &rarr; Set password &rarr; Email verification link sent</td>
+                        <td>Secondary method</td>
+                    </tr>
+                    <tr>
+                        <td class="col-method">Google OAuth</td>
+                        <td>Tap Google button &rarr; Google auth screen &rarr; Auto-profile fill</td>
+                        <td>Social login</td>
+                    </tr>
+                    <tr>
+                        <td class="col-method">LinkedIn OAuth</td>
+                        <td>Tap LinkedIn button &rarr; LinkedIn auth screen &rarr; Auto-profile fill</td>
+                        <td>Business login</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-accent-title accent-margin-top">Security Requirements:</h3>
+            <ul class="security-list">
+                <li>JWT tokens for session management (access + refresh token pair)</li>
+                <li>Access token expiry: 15 minutes | Refresh token expiry: 30 days</li>
+                <li>Rate limiting: max 5 failed OTP attempts &rarr; 30-minute lockout</li>
+                <li>All passwords hashed using bcrypt (cost factor 12)</li>
+            </ul>
+        </section>
+<!-- MODULE 3.2: PROFILE MANAGEMENT MATRIX -->
+<section class="profile-matrix-container">
+    <h3 class="subsection-header">3.2 Profile Management</h3>
+    
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Validation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="field-name">Full Name</td>
+                <td>Text</td>
+                <td class="req-yes">Yes</td>
+                <td class="validation-note">Min 2 chars, max 60</td>
+            </tr>
+            <tr>
+                <td class="field-name">Phone Number</td>
+                <td>Tel</td>
+                <td class="req-yes">Yes</td>
+                <td class="validation-note">Valid mobile format</td>
+            </tr>
+            <tr>
+                <td class="field-name">Email Address</td>
+                <td>Email</td>
+                <td class="req-yes">Yes</td>
+                <td class="validation-note">Valid email format</td>
+            </tr>
+            <tr>
+                <td class="field-name">Company Name</td>
+                <td>Text</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Max 100 chars</td>
+            </tr>
+            <tr>
+                <td class="field-name">Industry</td>
+                <td>Dropdown</td>
+                <td class="req-yes">Yes</td>
+                <td class="validation-note">From predefined list</td>
+            </tr>
+            <tr>
+                <td class="field-name">Location (City)</td>
+                <td>Text/GPS</td>
+                <td class="req-yes">Yes</td>
+                <td class="validation-note">Google Places API</td>
+            </tr>
+            <tr>
+                <td class="field-name">Services Offered</td>
+                <td>Tags</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Max 10 tags</td>
+            </tr>
+            <tr>
+                <td class="field-name">Profile Image</td>
+                <td>Image Upload</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Max 2MB, JPG/PNG</td>
+            </tr>
+            <tr>
+                <td class="field-name">Business Logo</td>
+                <td>Image Upload</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Max 2MB, JPG/PNG</td>
+            </tr>
+            <tr>
+                <td class="field-name">Bio / About</td>
+                <td>Textarea</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Max 500 chars</td>
+            </tr>
+            <tr>
+                <td class="field-name">Website URL</td>
+                <td>URL</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">Valid URL format</td>
+            </tr>
+            <tr>
+                <td class="field-name">Social Links</td>
+                <td>URL</td>
+                <td class="req-no">No</td>
+                <td class="validation-note">LinkedIn, Twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 3.3: AI SMART MATCH ENGINE -->
+<section class="match-engine-container">
+    <h3 class="subsection-header">3.3 AI Smart Match Engine</h3>
+    
+    <div class="logic-title">Algorithm Logic:</div>
+    <p class="logic-intro">The match engine calculates a compatibility score (0–100%) between users based on weighted signals:</p>
+    
+    <table class="match-algorithm-table">
+        <thead>
+            <tr>
+                <th>Signal</th>
+                <th>Weight</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="signal-name">Industry Match</td>
+                <td class="weight-value">35%</td>
+                <td>Same or related industry category</td>
+            </tr>
+            <tr>
+                <td class="signal-name">Location Proximity</td>
+                <td class="weight-value">20%</td>
+                <td>City &rarr; State &rarr; Country scoring</td>
+            </tr>
+            <tr>
+                <td class="signal-name">Services Overlap</td>
+                <td class="weight-value">20%</td>
+                <td>Tags match between what user needs vs offers</td>
+            </tr>
+            <tr>
+                <td class="signal-name">Activity Score</td>
+                <td class="weight-value">15%</td>
+                <td>Recent login, posts, responses</td>
+            </tr>
+            <tr>
+                <td class="signal-name">Trust Score</td>
+                <td class="weight-value">10%</td>
+                <td>Verified profile, ratings, completed deals</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="output-title">Output:</div>
+    <ul class="output-spec-list">
+        <li>Match score displayed as percentage (e.g., 87% Match)</li>
+        <li>Top 20 matches shown on AI Matches screen, refreshed daily</li>
+        <li>New matches trigger push notification</li>
+        <li>User can Accept (Connect) or Skip each match</li>
+    </ul>
+</section>
+
+<!-- MODULE 3.4: SMART LEAD SYSTEM -->
+<section class="leads-system-container">
+    <h3 class="subsection-header">3.4 Smart Lead System</h3>
+    <p class="leads-intro">Users can post business requirements (Needs) or service offerings (Offers). The system intelligently routes leads to matching users.</p>
+    
+    <!-- FIELD CONFIGURATION MATRIX -->
+    <table class="leads-config-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="field-name">Lead Title</td>
+                <td>Text</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Lead Type</td>
+                <td>Dropdown: Need / Offer</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Description</td>
+                <td>Textarea (max 1000 chars)</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Industry Category</td>
+                <td>Dropdown</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Budget / Price</td>
+                <td>Number (optional)</td>
+                <td class="req-no">No</td>
+            </tr>
+            <tr>
+                <td class="field-name">Location</td>
+                <td>Text / Remote</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Deadline / Validity</td>
+                <td>Date Picker</td>
+                <td class="req-no">No</td>
+            </tr>
+            <tr>
+                <td class="field-name">Attachments</td>
+                <td>File Upload (PDF/Image)</td>
+                <td class="req-no">No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LEAD ACTIONS LIFECYCLE TABLE -->
+    <div class="actions-title">Lead Actions:</div>
+    <table class="leads-actions-table">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Description</th>
+                <th>Status Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="action-name">Post Lead</td>
+                <td>Create new Need or Offer listing</td>
+                <td><span class="status-tag active">Active</span></td>
+            </tr>
+            <tr>
+                <td class="action-name">Express Interest</td>
+                <td>Notify lead poster of interest</td>
+                <td><span class="status-tag interested">Interested</span></td>
+            </tr>
+            <tr>
+                <td class="action-name">Accept Lead</td>
+                <td>Both parties agree to connect</td>
+                <td><span class="status-tag progress">In Progress</span></td>
+            </tr>
+            <tr>
+                <td class="action-name">Mark Converted</td>
+                <td>Deal closed successfully</td>
+                <td><span class="status-tag converted">Converted</span></td>
+            </tr>
+            <tr>
+                <td class="action-name">Close Lead</td>
+                <td>Lead no longer active</td>
+                <td><span class="status-tag closed">Closed</span></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 3.5: BUSINESS CIRCLES -->
+<section class="business-circles-container">
+    <h3 class="subsection-header">3.5 Business Circles</h3>
+    <p class="circles-intro">Industry-based groups for networking and collaboration.</p>
+    
+    <table class="circles-feature-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature-name">Create Circle</td>
+                <td>Any user can create a Circle (e.g., "Hyderabad IT Professionals")</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Join Circle</td>
+                <td>Search and join existing Circles (max 10 per user)</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Circle Feed</td>
+                <td>Post updates, leads, and announcements within the Circle</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Admin Controls</td>
+                <td>Circle creator can approve/remove members</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Max Members</td>
+                <td>500 members per Circle</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 3.6: GROWTH SESSIONS (EVENTS) -->
+<section class="events-session-container">
+    <h3 class="subsection-header">3.6 Growth Sessions (Events)</h3>
+    
+    <!-- DATA SPECIFICATION MATRIX -->
+    <table class="events-matrix-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="field-name">Event Title</td>
+                <td>Text</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Event Type</td>
+                <td>Online / Offline / Hybrid</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Date & Time</td>
+                <td>DateTime Picker</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Location / Link</td>
+                <td>Text / URL</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Description</td>
+                <td>Textarea</td>
+                <td class="req-yes">Yes</td>
+            </tr>
+            <tr>
+                <td class="field-name">Max Participants</td>
+                <td>Number</td>
+                <td class="req-no">No</td>
+            </tr>
+            <tr>
+                <td class="field-name">Registration Deadline</td>
+                <td>Date</td>
+                <td class="req-no">No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- EVENT LIFECYCLE ACTION ITEMS -->
+    <div class="event-actions-wrapper">
+        <span class="actions-label">Actions:</span>
+        <span class="action-item">Create Event</span>
+        <span class="action-divider">|</span>
+        <span class="action-item">Join Event</span>
+        <span class="action-divider">|</span>
+        <span class="action-item">RSVP (Yes/Maybe/No)</span>
+        <span class="action-divider">|</span>
+        <span class="action-item">Cancel Registration</span>
+    </div>
+</section>
+
+<!-- MODULE 3.7: CHAT SYSTEM -->
+<section class="chat-system-container">
+    <h3 class="subsection-header">3.7 Chat System</h3>
+    
+    <table class="chat-specs-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Specification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature-name">One-to-One Chat</td>
+                <td>Private messaging between connected users only</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Message Types</td>
+                <td>Text, Voice messages, Images, PDF/Doc attachments (max 10MB)</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Encryption</td>
+                <td>End-to-end encryption (E2EE) using AES-256</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Message Status</td>
+                <td>
+                    Sent <span class="status-tick">&checkmark;</span> | 
+                    Delivered <span class="status-tick">&checkmark;&checkmark;</span> | 
+                    Read <span class="status-tick read">&checkmark;&checkmark;</span> (blue)
+                </td>
+            </tr>
+            <tr>
+                <td class="feature-name">Chat History</td>
+                <td>Stored for 1 year; exportable by user</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Block / Report</td>
+                <td>User can block or report another user from chat</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Online Status</td>
+                <td>Show Last Seen / Online indicator</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 3.8: DASHBOARD & ANALYTICS -->
+<section class="analytics-dashboard-container">
+    <h3 class="subsection-header">3.8 Dashboard & Analytics</h3>
+    
+    <table class="analytics-matrix-table">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Description</th>
+                <th>Display Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="metric-name">Leads Received</td>
+                <td>Total leads matched to this user</td>
+                <td class="display-type">Count card</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Leads Posted</td>
+                <td>Total leads created by user</td>
+                <td class="display-type">Count card</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Deals Closed</td>
+                <td>Leads marked as Converted</td>
+                <td class="display-type">Count card</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Connections Made</td>
+                <td>Total accepted AI matches</td>
+                <td class="display-type">Count card</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Profile Views</td>
+                <td>How many times profile was viewed</td>
+                <td class="display-type font-trend">Count + trend</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Monthly Activity</td>
+                <td>Logins, posts, chats per month</td>
+                <td class="display-type">Bar chart</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Lead Conversion Rate</td>
+                <td>Converted / Total received x 100</td>
+                <td class="display-type">Percentage + gauge</td>
+            </tr>
+            <tr>
+                <td class="metric-name">Revenue Generated</td>
+                <td>Self-reported earnings from deals</td>
+                <td class="display-type">Currency card</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 3.9: TRUST SCORE SYSTEM -->
+<section class="trust-system-container">
+    <h3 class="subsection-header">3.9 Trust Score System</h3>
+    <p class="trust-intro">Trust Score is a 0–100 rating that reflects a user's reliability and activity on the platform.</p>
+    
+    <!-- SYSTEM POINTS MATRIX -->
+    <table class="trust-matrix-table">
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Max Points</th>
+                <th>Criteria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="component-name">Profile Completeness</td>
+                <td class="points-value">20 pts</td>
+                <td>All fields filled, photo uploaded, bio added</td>
+            </tr>
+            <tr>
+                <td class="component-name">Verified Phone/Email</td>
+                <td class="points-value">15 pts</td>
+                <td>OTP/email verification completed</td>
+            </tr>
+            <tr>
+                <td class="component-name">Deals Closed</td>
+                <td class="points-value">25 pts</td>
+                <td>5 pts per converted deal (max 25)</td>
+            </tr>
+            <tr>
+                <td class="component-name">Peer Ratings</td>
+                <td class="points-value">20 pts</td>
+                <td>Average star rating from other users &times; 4</td>
+            </tr>
+            <tr>
+                <td class="component-name">Activity Frequency</td>
+                <td class="points-value">10 pts</td>
+                <td>Logins and posts in last 30 days</td>
+            </tr>
+            <tr>
+                <td class="component-name">No Violations</td>
+                <td class="points-value">10 pts</td>
+                <td>No blocks/reports against user</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TRUST CORE SYSTEM BULLET RULES -->
+    <ul class="trust-rules-list">
+        <li>
+            Trust Score displayed as a badge on profile 
+            <div class="tier-badges-inline">
+                <span class="badge-tier bronze">Bronze: 0–40</span>
+                <span class="badge-tier silver">Silver: 41–70</span>
+                <span class="badge-tier gold">Gold: 71–100</span>
+            </div>
+        </li>
+        <li>Low Trust Score users have reduced visibility in AI Matches</li>
+    </ul>
+</section>
+
+<!-- MODULE 4: SUBSCRIPTION MODULE -->
+<section class="subscription-module-container">
+    <div class="subscription-main-header">4. SUBSCRIPTION MODULE</div>
+    
+    <!-- TIER COMPARISON MATRIX -->
+    <table class="subscription-matrix-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Basic (Free)</th>
+                <th>Pro (&#8377;499/mo)</th>
+                <th>Elite (&#8377;999/mo)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature-name">AI Matches per day</td>
+                <td>5</td>
+                <td>20</td>
+                <td class="highlight-tier-val">Unlimited</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Active Leads</td>
+                <td>2</td>
+                <td>10</td>
+                <td class="highlight-tier-val">Unlimited</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Business Circles</td>
+                <td>2</td>
+                <td>5</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Chat Access</td>
+                <td>Limited (10/day)</td>
+                <td>Full Access</td>
+                <td>Full Access</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Growth Sessions</td>
+                <td>2/month</td>
+                <td>10/month</td>
+                <td class="highlight-tier-val">Unlimited</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Analytics Dashboard</td>
+                <td>Basic</td>
+                <td>Advanced</td>
+                <td>Full + Export</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Profile Boost</td>
+                <td>No</td>
+                <td>Monthly once</td>
+                <td>Weekly</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Priority Support</td>
+                <td>No</td>
+                <td>Email</td>
+                <td>Email + Chat</td>
+            </tr>
+            <tr>
+                <td class="feature-name">Trust Score Boost</td>
+                <td>Standard</td>
+                <td>Standard</td>
+                <td class="highlight-tier-val">+10 bonus pts</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- PAYMENT INTEGRATION DETAILS LIST -->
+    <div class="payment-title">Payment Methods:</div>
+    <ul class="payment-spec-list">
+        <li>UPI (Google Pay, PhonePe, Paytm) via Razorpay</li>
+        <li>Debit / Credit Cards (Visa, Mastercard, RuPay)</li>
+        <li>Net Banking</li>
+        <li>Auto-renewal with reminder notification 3 days before billing</li>
+    </ul>
+</section>
+
+<!-- MODULE 5: NOTIFICATION SYSTEM -->
+<section class="notification-system-container">
+    <div class="notification-main-header">5. NOTIFICATION SYSTEM</div>
+    
+    <!-- TRIGGER EVENTS MATRIX TABLE -->
+    <table class="notification-matrix-table">
+        <thead>
+            <tr>
+                <th>Trigger Event</th>
+                <th>Channel</th>
+                <th>Template</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="event-title">New AI Match</td>
+                <td class="channel-type">Push + In-App</td>
+                <td class="template-string">"You have a new 92% business match!"</td>
+            </tr>
+            <tr>
+                <td class="event-title">New Lead Posted (matching)</td>
+                <td class="channel-type">Push + Email</td>
+                <td class="template-string">"A new lead matches your profile"</td>
+            </tr>
+            <tr>
+                <td class="event-title">Lead Interest Received</td>
+                <td class="channel-type">Push + In-App</td>
+                <td class="template-string">"[Name] is interested in your lead"</td>
+            </tr>
+            <tr>
+                <td class="event-title">Deal Converted</td>
+                <td class="channel-type">Push + Email + SMS</td>
+                <td class="template-string">"Congratulations! Deal marked as closed"</td>
+            </tr>
+            <tr>
+                <td class="event-title">New Chat Message</td>
+                <td class="channel-type">Push + In-App</td>
+                <td class="template-string">"New message from [Name]"</td>
+            </tr>
+            <tr>
+                <td class="event-title">Growth Session Reminder</td>
+                <td class="channel-type">Push + Email</td>
+                <td class="template-string">"Your session starts in 1 hour"</td>
+            </tr>
+            <tr>
+                <td class="event-title">Subscription Renewal</td>
+                <td class="channel-type">Email + SMS</td>
+                <td class="template-string">"Your Pro plan renews in 3 days"</td>
+            </tr>
+            <tr>
+                <td class="event-title">Trust Score Change</td>
+                <td class="channel-type">In-App</td>
+                <td class="template-string">"Your Trust Score increased to 75!"</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 6: SUPPORT SYSTEM -->
+<section class="support-system-container">
+    <div class="support-main-header">6. SUPPORT SYSTEM</div>
+    
+    <!-- SUPPORT SYSTEM CHANNELS MATRIX TABLE -->
+    <table class="support-matrix-table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>SLA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="support-type">In-App Chat Support</td>
+                <td>Live chat with support agent (business hours 9AM&ndash;6PM IST)</td>
+                <td class="sla-value highlight-sla">2 hour response</td>
+            </tr>
+            <tr>
+                <td class="support-type">Ticket System</td>
+                <td>Submit issue &rarr; auto ticket ID &rarr; email confirmation</td>
+                <td class="sla-value">24 hour resolution</td>
+            </tr>
+            <tr>
+                <td class="support-type">FAQ / Help Center</td>
+                <td>Searchable knowledge base within app</td>
+                <td class="sla-value self-service">Self-service</td>
+            </tr>
+            <tr>
+                <td class="support-type">Report User</td>
+                <td>Flag inappropriate profiles/content</td>
+                <td class="sla-value">Reviewed in 48 hours</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 7: ADMIN MODULE -->
+<section class="admin-module-container">
+    <div class="admin-main-header">7. ADMIN MODULE</div>
+    
+    <!-- SECTION 7.1: ADMIN DASHBOARD KPIs -->
+    <h3 class="subsection-header">7.1 Admin Dashboard KPIs</h3>
+    <table class="admin-matrix-table">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="admin-field-name">Total Registered Users</td>
+                <td>All-time + this month</td>
+            </tr>
+            <tr>
+                <td class="admin-field-name">Active Users (DAU/MAU)</td>
+                <td>Daily and monthly active users</td>
+            </tr>
+            <tr>
+                <td class="admin-field-name">Total Leads Posted</td>
+                <td>Active / Closed / Converted breakdown</td>
+            </tr>
+            <tr>
+                <td class="admin-field-name">Revenue (MRR)</td>
+                <td>Monthly Recurring Revenue by plan</td>
+            </tr>
+            <tr>
+                <td class="admin-field-name">Conversion Rate</td>
+                <td>% of leads converted to deals</td>
+            </tr>
+            <tr>
+                <td class="admin-field-name">Support Tickets Open</td>
+                <td>Unresolved ticket count</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 7.2: USER MANAGEMENT -->
+    <h3 class="subsection-header">7.2 User Management</h3>
+    <table class="admin-matrix-table">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="admin-action-name">View All Users</td>
+                <td>Search, filter by plan/industry/location/status</td>
+            </tr>
+            <tr>
+                <td class="admin-action-name">Approve / Reject</td>
+                <td>Manual verification for flagged accounts</td>
+            </tr>
+            <tr>
+                <td class="admin-action-name">Block User</td>
+                <td>Temporarily suspend account access</td>
+            </tr>
+            <tr>
+                <td class="admin-action-name">Delete User</td>
+                <td>Permanent removal (with data purge option)</td>
+            </tr>
+            <tr>
+                <td class="admin-action-name">Edit User</td>
+                <td>Update plan, Trust Score, verification badge</td>
+            </tr>
+            <tr>
+                <td class="admin-action-name">View User Activity</td>
+                <td>Login logs, leads, chats history</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 7.3: LEAD MONITORING -->
+    <h3 class="subsection-header">7.3 Lead Monitoring</h3>
+    <ul class="admin-spec-list">
+        <li>View all active, closed, and converted leads across the platform</li>
+        <li>Filter by industry, location, date range, user, status</li>
+        <li>Flag and remove inappropriate lead postings</li>
+        <li>Export lead data to CSV/Excel</li>
+    </ul>
+
+    <!-- SECTION 7.4: REPORTS & ANALYTICS -->
+    <h3 class="subsection-header">7.4 Reports & Analytics</h3>
+    <ul class="admin-spec-list">
+        <li>User growth chart (daily/weekly/monthly)</li>
+        <li>Lead activity heat map by industry</li>
+        <li>Revenue report by subscription plan</li>
+        <li>Churn rate and retention metrics</li>
+    </ul>
+</section>
+
+<!-- MODULE 8: TECHNOLOGY STACK -->
+<section class="tech-stack-container">
+    <div class="tech-main-header">8. TECHNOLOGY STACK</div>
+    
+    <!-- SYSTEM LAYERS COMPONENT MATRIX TABLE -->
+    <table class="tech-matrix-table">
+        <thead>
+            <tr>
+                <th>Layer</th>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tech-layer-name">Mobile App</td>
+                <td>Flutter 3.x (Dart)</td>
+                <td>Android + iOS from single codebase</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Web App</td>
+                <td>React.js 18 + TypeScript</td>
+                <td>Responsive browser application</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Admin Panel</td>
+                <td>React.js + Ant Design</td>
+                <td>Internal management dashboard</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Backend API</td>
+                <td class="highlight-tech-val">Node.js + Express.js</td>
+                <td>RESTful API server</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Database</td>
+                <td>MongoDB Atlas</td>
+                <td>Primary data storage (NoSQL)</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Cache</td>
+                <td>Redis</td>
+                <td>Session cache, OTP, rate limiting</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">File Storage</td>
+                <td>AWS S3</td>
+                <td>Profile images, lead attachments</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Cloud Hosting</td>
+                <td>AWS EC2 + Load Balancer</td>
+                <td>App servers, auto-scaling</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">CDN</td>
+                <td>AWS CloudFront</td>
+                <td>Static assets & media delivery</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">Real-time</td>
+                <td class="highlight-tech-val">Socket.io</td>
+                <td>Chat & live notifications</td>
+            </tr>
+            <tr>
+                <td class="tech-layer-name">AI/ML</td>
+                <td>Python + FastAPI (microservice)</td>
+                <td>Match engine scoring</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 9: API & INTEGRATIONS -->
+<section class="api-integrations-container">
+    <div class="api-main-header">9. API & INTEGRATIONS</div>
+    
+    <!-- SECTION 9.1: THIRD-PARTY INTEGRATIONS -->
+    <h3 class="subsection-header">9.1 Third-Party Integrations</h3>
+    <table class="integrations-matrix-table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Provider</th>
+                <th>Purpose</th>
+                <th>Endpoint Used</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tech-label-name">Payments</td>
+                <td>Razorpay</td>
+                <td>Subscription billing, UPI, cards</td>
+                <td>Orders + Webhooks API</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">SMS / OTP</td>
+                <td>Twilio</td>
+                <td>OTP delivery, deal alerts</td>
+                <td>Messages API</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">Email</td>
+                <td>SendGrid</td>
+                <td>Transactional emails</td>
+                <td>Mail Send API</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">Maps / Location</td>
+                <td>Google Places API</td>
+                <td>Location autocomplete</td>
+                <td>Places Autocomplete</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">Social Login</td>
+                <td>Google OAuth 2.0</td>
+                <td>Google sign-in</td>
+                <td>OAuth 2.0 Token</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">Social Login</td>
+                <td>LinkedIn OAuth</td>
+                <td>LinkedIn sign-in</td>
+                <td>OAuth 2.0 Token</td>
+            </tr>
+            <tr>
+                <td class="tech-label-name">Push Notifications</td>
+                <td>Firebase FCM</td>
+                <td>Mobile push alerts</td>
+                <td>FCM HTTP v1 API</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 9.2: KEY INTERNAL API ENDPOINTS -->
+    <h3 class="subsection-header">9.2 Key Internal API Endpoints</h3>
+    <table class="endpoints-matrix-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="method-badge post">POST</span></td>
+                <td class="endpoint-path">/api/auth/otp/send</td>
+                <td>Send OTP to mobile number</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge post">POST</span></td>
+                <td class="endpoint-path">/api/auth/otp/verify</td>
+                <td>Verify OTP and return JWT</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge get">GET</span></td>
+                <td class="endpoint-path">/api/users/:id/profile</td>
+                <td>Get user profile</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge put">PUT</span></td>
+                <td class="endpoint-path">/api/users/:id/profile</td>
+                <td>Update user profile</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge get">GET</span></td>
+                <td class="endpoint-path">/api/matches</td>
+                <td>Get AI matches for current user</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge post">POST</span></td>
+                <td class="endpoint-path">/api/leads</td>
+                <td>Create new lead</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge get">GET</span></td>
+                <td class="endpoint-path">/api/leads</td>
+                <td>List leads (filtered)</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge put">PUT</span></td>
+                <td class="endpoint-path">/api/leads/:id/status</td>
+                <td>Update lead status</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge get">GET</span></td>
+                <td class="endpoint-path">/api/chat/:userId</td>
+                <td>Get chat history</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge post">POST</span></td>
+                <td class="endpoint-path">/api/chat/send</td>
+                <td>Send chat message</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge get">GET</span></td>
+                <td class="endpoint-path">/api/dashboard/stats</td>
+                <td>Get user dashboard metrics</td>
+            </tr>
+            <tr>
+                <td><span class="method-badge post">POST</span></td>
+                <td class="endpoint-path">/api/subscriptions/create</td>
+                <td>Create Razorpay subscription</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 10: DATABASE SCHEMA -->
+<section class="schema-module-container">
+    <div class="schema-main-header">10. DATABASE SCHEMA (MongoDB Collections)</div>
+    
+    <!-- SECTION 10.1: USERS COLLECTION -->
+    <h3 class="subsection-header">10.1 Users Collection</h3>
+    <p class="collection-meta">Collection: <span class="meta-code">users</span></p>
+    
+    <table class="schema-matrix-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="schema-field-key">_id</td>
+                <td class="schema-type-val">ObjectId</td>
+                <td>Auto-generated unique ID</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">name</td>
+                <td class="schema-type-val">String</td>
+                <td>Full name</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">phone</td>
+                <td class="schema-type-val">String</td>
+                <td>Mobile number (unique)</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">email</td>
+                <td class="schema-type-val">String</td>
+                <td>Email address (unique)</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">password_hash</td>
+                <td class="schema-type-val">String</td>
+                <td>bcrypt hashed password</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">auth_providers</td>
+                <td class="schema-type-val">Array</td>
+                <td>e.g. ["google", "phone"]</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">company</td>
+                <td class="schema-type-val">String</td>
+                <td>Company name</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">industry</td>
+                <td class="schema-type-val">String</td>
+                <td>Industry category</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">location</td>
+                <td class="schema-type-val">Object</td>
+                <td>{ city, state, country, coordinates }</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">services</td>
+                <td class="schema-type-val">Array</td>
+                <td>List of service tags</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">profile_image</td>
+                <td class="schema-type-val">String</td>
+                <td>S3 URL</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">trust_score</td>
+                <td class="schema-type-val">Number</td>
+                <td>0&ndash;100</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">subscription</td>
+                <td class="schema-type-val">Object</td>
+                <td>{ plan, status, start, end }</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">is_verified</td>
+                <td class="schema-type-val">Boolean</td>
+                <td>Profile verification flag</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">is_blocked</td>
+                <td class="schema-type-val">Boolean</td>
+                <td>Admin block flag</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">created_at</td>
+                <td class="schema-type-val">Date</td>
+                <td>Registration timestamp</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">last_active</td>
+                <td class="schema-type-val">Date</td>
+                <td>Last login timestamp</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECTION 10.2: LEADS COLLECTION -->
+<section class="leads-schema-container">
+    <h3 class="subsection-header">10.2 Leads Collection</h3>
+    <p class="collection-meta">Collection: <span class="meta-code">leads</span></p>
+    
+    <table class="schema-matrix-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="schema-field-key">_id</td>
+                <td class="schema-type-val">ObjectId</td>
+                <td>Auto ID</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">user_id</td>
+                <td class="schema-type-val">ObjectId</td>
+                <td>Reference to users._id</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">type</td>
+                <td class="schema-type-val">String</td>
+                <td>"need" | "offer"</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">title</td>
+                <td class="schema-type-val">String</td>
+                <td>Lead title</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">description</td>
+                <td class="schema-type-val">String</td>
+                <td>Detailed description</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">industry</td>
+                <td class="schema-type-val">String</td>
+                <td>Industry category</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">budget</td>
+                <td class="schema-type-val">Number</td>
+                <td>Optional budget/price</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">location</td>
+                <td class="schema-type-val">String</td>
+                <td>Location or "Remote"</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">status</td>
+                <td class="schema-type-val">String</td>
+                <td>"active" | "in_progress" | "converted" | "closed"</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">interested_users</td>
+                <td class="schema-type-val">Array</td>
+                <td>List of user_ids who expressed interest</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">expires_at</td>
+                <td class="schema-type-val">Date</td>
+                <td>Lead expiry date</td>
+            </tr>
+            <tr>
+                <td class="schema-field-key">created_at</td>
+                <td class="schema-type-val">Date</td>
+                <td>Post timestamp</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECTION 10.3: OTHER KEY COLLECTIONS -->
+<section class="other-collections-container">
+    <h3 class="subsection-header">10.3 Other Key Collections</h3>
+    
+    <table class="collections-summary-table">
+        <thead>
+            <tr>
+                <th>Collection</th>
+                <th>Key Fields</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="collection-name-cell">matches</td>
+                <td class="fields-list-cell">_id, user_id, matched_user_id, score, status, created_at</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">chats</td>
+                <td class="fields-list-cell">_id, participants[], created_at</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">messages</td>
+                <td class="fields-list-cell">_id, chat_id, sender_id, type, content, is_read, sent_at</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">circles</td>
+                <td class="fields-list-cell">_id, name, admin_id, industry, members[], created_at</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">events</td>
+                <td class="fields-list-cell">_id, title, type, host_id, date_time, location, rsvp_list[], max_participants</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">notifications</td>
+                <td class="fields-list-cell">_id, user_id, type, message, is_read, created_at</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">subscriptions</td>
+                <td class="fields-list-cell">_id, user_id, plan, razorpay_id, status, start_date, end_date</td>
+            </tr>
+            <tr>
+                <td class="collection-name-cell">support_tickets</td>
+                <td class="fields-list-cell">_id, user_id, subject, description, status, created_at, resolved_at</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 11: NON-FUNCTIONAL REQUIREMENTS -->
+<section class="nfr-module-container">
+    <div class="nfr-main-header">11. NON-FUNCTIONAL REQUIREMENTS</div>
+    
+    <table class="nfr-matrix-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Requirement</th>
+                <th>Target</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="nfr-category-name">Performance</td>
+                <td>API response time (95th percentile)</td>
+                <td class="nfr-target-val">&lt; 300ms</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Performance</td>
+                <td>App load time (cold start)</td>
+                <td class="nfr-target-val">&lt; 3 seconds</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Performance</td>
+                <td>AI Match calculation time</td>
+                <td class="nfr-target-val">&lt; 2 seconds</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Scalability</td>
+                <td>Concurrent users supported</td>
+                <td>10,000+ simultaneous</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Scalability</td>
+                <td>Database scaling</td>
+                <td>MongoDB Atlas auto-scale</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Availability</td>
+                <td>System uptime SLA</td>
+                <td>99.5% monthly</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Security</td>
+                <td>Data in transit encryption</td>
+                <td class="highlight-nfr-val">TLS 1.3</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Security</td>
+                <td>Data at rest encryption</td>
+                <td class="highlight-nfr-val">AES-256</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Security</td>
+                <td>Chat message encryption</td>
+                <td class="highlight-nfr-val">End-to-End (E2EE)</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Security</td>
+                <td>OWASP Top 10 compliance</td>
+                <td>Mandatory</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Privacy</td>
+                <td>User data handling</td>
+                <td>PDPB (India) compliant</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Usability</td>
+                <td>UI accessibility</td>
+                <td>WCAG 2.1 Level AA</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Maintainability</td>
+                <td>Code coverage (tests)</td>
+                <td>Minimum 70%</td>
+            </tr>
+            <tr>
+                <td class="nfr-category-name">Backup</td>
+                <td>Database backup frequency</td>
+                <td>Daily automated + 30-day retention</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- MODULE 12: UI DESIGN SPECIFICATION -->
+<section class="ui-spec-container">
+    <div class="ui-main-header">12. UI DESIGN SPECIFICATION</div>
+    
+    <!-- SECTION 12.1: BRAND IDENTITY -->
+    <h3 class="subsection-header">12.1 Brand Identity</h3>
+    
+    <table class="ui-matrix-table">
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Value</th>
+                <th>Usage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ui-element-name">Primary Color</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #0B1F45;"></span>
+                    <code class="hex-code">#0B1F45</code> (Deep Navy)
+                </td>
+                <td>Headers, primary buttons, nav bar</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Accent Color</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #00A896;"></span>
+                    <code class="hex-code">#00A896</code> (Teal)
+                </td>
+                <td>Highlights, icons, tags, dividers</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Highlight Color</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #F4A400;"></span>
+                    <code class="hex-code">#F4A400</code> (Amber)
+                </td>
+                <td>CTAs, badges, star ratings</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Background</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #F0F4F8; border: 1px solid #cbd5e1;"></span>
+                    <code class="hex-code">#F0F4F8</code> (Light Blue-Grey)
+                </td>
+                <td>Screen backgrounds</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Card Background</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #FFFFFF; border: 1px solid #cbd5e1;"></span>
+                    <code class="hex-code">#FFFFFF</code> (White)
+                </td>
+                <td>Cards, modals, inputs</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Body Text</td>
+                <td>
+                    <span class="color-preview-pill" style="background-color: #4A5568;"></span>
+                    <code class="hex-code">#4A5568</code> (Dark Grey)
+                </td>
+                <td>Paragraph text</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Heading Font</td>
+                <td class="font-spec-value">Poppins Bold / SemiBold</td>
+                <td>All headings</td>
+            </tr>
+            <tr>
+                <td class="ui-element-name">Body Font</td>
+                <td class="font-spec-value">Inter Regular / Medium</td>
+                <td>Body text, labels</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECTION 12.2: SCREEN INVENTORY -->
+<section class="inventory-module-container">
+    <h3 class="subsection-header">12.2 Screen Inventory</h3>
+    
+    <table class="inventory-matrix-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Screen Name</th>
+                <th>Key Elements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="seq-num">1</td>
+                <td class="screen-name">Splash Screen</td>
+                <td>BWNNext logo centered, tagline, animated teal loading bar</td>
+            </tr>
+            <tr>
+                <td class="seq-num">2</td>
+                <td class="screen-name">Onboarding (3 slides)</td>
+                <td>Feature highlights with illustrations, Skip &amp; Next buttons</td>
+            </tr>
+            <tr>
+                <td class="seq-num">3</td>
+                <td class="screen-name">Login / Register</td>
+                <td>Phone/Email input, OTP field, Google &amp; LinkedIn social buttons</td>
+            </tr>
+            <tr>
+                <td class="seq-num">4</td>
+                <td class="screen-name">Home Dashboard</td>
+                <td>Greeting, Trust Score badge, AI Match count card, Lead activity, Quick actions</td>
+            </tr>
+            <tr>
+                <td class="seq-num">5</td>
+                <td class="screen-name">AI Matches Screen</td>
+                <td>Card-stack UI, match % badge, industry tag, Connect / Skip buttons</td>
+            </tr>
+            <tr>
+                <td class="seq-num">6</td>
+                <td class="screen-name">Smart Leads Screen</td>
+                <td>Tabs (Needs / Offers), lead cards, floating + Post button</td>
+            </tr>
+            <tr>
+                <td class="seq-num">7</td>
+                <td class="screen-name">Lead Detail Screen</td>
+                <td>Full description, poster profile, Express Interest CTA</td>
+            </tr>
+            <tr>
+                <td class="seq-num">8</td>
+                <td class="screen-name">Business Circles</td>
+                <td>Circle cards with member count, Join / Manage buttons</td>
+            </tr>
+            <tr>
+                <td class="seq-num">9</td>
+                <td class="screen-name">Growth Sessions</td>
+                <td>Event cards with date/type badge, RSVP button, calendar view</td>
+            </tr>
+            <tr>
+                <td class="seq-num">10</td>
+                <td class="screen-name">Chat List Screen</td>
+                <td>Recent chats, unread badge, search bar</td>
+            </tr>
+            <tr>
+                <td class="seq-num">11</td>
+                <td class="screen-name">Chat Screen</td>
+                <td>Chat bubbles (Navy=sent, Grey=received), voice icon, attachment</td>
+            </tr>
+            <tr>
+                <td class="seq-num">12</td>
+                <td class="screen-name">My Profile</td>
+                <td>Avatar, Trust Score ring, stats row, bio, services tags, Edit button</td>
+            </tr>
+            <tr>
+                <td class="seq-num">13</td>
+                <td class="screen-name">Analytics Dashboard</td>
+                <td>Stats cards, bar chart (monthly), lead funnel chart</td>
+            </tr>
+            <tr>
+                <td class="seq-num">14</td>
+                <td class="screen-name">Subscription Screen</td>
+                <td>Plan cards (Basic/Pro/Elite), feature comparison, Subscribe CTA</td>
+            </tr>
+            <tr>
+                <td class="seq-num">15</td>
+                <td class="screen-name">Settings Screen</td>
+                <td>Notifications, Privacy, Security, Logout</td>
+            </tr>
+            <tr>
+                <td class="seq-num">16</td>
+                <td class="screen-name">Support Screen</td>
+                <td>Chat support button, Submit ticket form, FAQ accordion</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECTION 12.3: NAVIGATION STRUCTURE -->
+<section class="nav-structure-container">
+    <h3 class="subsection-header">12.3 Navigation Structure</h3>
+    
+    <div class="nav-spec-details">
+        <p><strong>Bottom Navigation Bar (Mobile)</strong> &mdash; 5 tabs:</p>
+    </div>
+
+    <!-- MOBILE NAVIGATION VIEWER BOX -->
+    <div class="mobile-nav-preview">
+        <nav class="bottom-nav-bar">
+            <a href="#" class="nav-tab active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-tab">
+                <i class="fa-solid fa-users-viewfinder"></i>
+                <span>Matches</span>
+            </a>
+            <a href="#" class="nav-tab">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Leads</span>
+            </a>
+            <a href="#" class="nav-tab">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Chat</span>
+            </a>
+            <a href="#" class="nav-tab">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="nav-spec-details spacing-top">
+        <p><strong>Side Drawer (Web)</strong> &mdash; Full menu with all sections, collapsible on mobile.</p>
+    </div>
+
+    <!-- WEB SIDE MENU CONTAINER PREVIEW -->
+    <div class="web-drawer-preview">
+        <aside class="side-drawer">
+            <div class="drawer-header">
+                <i class="fa-solid fa-bars toggle-icon"></i>
+                <span class="brand-text">BWNNext Menu</span>
+            </div>
+            <ul class="drawer-links">
+                <li class="active"><i class="fa-solid fa-house"></i> <span>Home Dashboard</span></li>
+                <li><i class="fa-solid fa-users-viewfinder"></i> <span>AI Matches</span></li>
+                <li><i class="fa-solid fa-lightbulb"></i> <span>Smart Leads</span></li>
+                <li><i class="fa-solid fa-comment-dots"></i> <span>Chat Room</span></li>
+                <li><i class="fa-solid fa-circle-nodes"></i> <span>Business Circles</span></li>
+                <li><i class="fa-solid fa-calendar-days"></i> <span>Growth Sessions</span></li>
+                <li><i class="fa-solid fa-chart-pie"></i> <span>Analytics Panel</span></li>
+                <li><i class="fa-solid fa-credit-card"></i> <span>Subscription</span></li>
+                <li><i class="fa-solid fa-user-shield"></i> <span>Admin Control</span></li>
+                <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
+            </ul>
+        </aside>
+    </div>
+</section>
+
+<!-- MODULE 13: DEVELOPMENT PHASE PLAN -->
+<section class="plan-module-container">
+    <div class="plan-main-header">13. DEVELOPMENT PHASE PLAN</div>
+    
+    <!-- PHASE LIFECYCLE MATRIX TABLE -->
+    <table class="plan-matrix-table">
+        <thead>
+            <tr>
+                <th>Phase</th>
+                <th>Duration</th>
+                <th>Deliverables</th>
+                <th>Priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="phase-title">Phase 1 &ndash; Foundation</td>
+                <td>4 Weeks</td>
+                <td>Project setup, Auth (OTP/Email/Social), Profile CRUD, Basic UI shell, Navigation, Admin login</td>
+                <td><span class="priority-tag critical">Critical</span></td>
+            </tr>
+            <tr>
+                <td class="phase-title">Phase 2 &ndash; Core Features</td>
+                <td>5 Weeks</td>
+                <td>AI Match Engine, Smart Lead System (Post/Accept/Convert), Business Circles, Push Notifications</td>
+                <td><span class="priority-tag high">High</span></td>
+            </tr>
+            <tr>
+                <td class="phase-title">Phase 3 &ndash; Engagement</td>
+                <td>4 Weeks</td>
+                <td>Chat System (E2EE), Growth Sessions, Trust Score Engine, In-app Notifications</td>
+                <td><span class="priority-tag high">High</span></td>
+            </tr>
+            <tr>
+                <td class="phase-title">Phase 4 &ndash; Monetization</td>
+                <td>3 Weeks</td>
+                <td>Subscription Plans, Razorpay Integration, Plan restrictions enforcement, Billing dashboard</td>
+                <td><span class="priority-tag high">High</span></td>
+            </tr>
+            <tr>
+                <td class="phase-title">Phase 5 &ndash; Admin &amp; Analytics</td>
+                <td>3 Weeks</td>
+                <td>Admin Panel (User mgmt, Lead monitoring, Revenue reports), Analytics Dashboard (user-facing)</td>
+                <td><span class="priority-tag medium">Medium</span></td>
+            </tr>
+            <tr>
+                <td class="phase-title">Phase 6 &ndash; Testing &amp; Launch</td>
+                <td>3 Weeks</td>
+                <td>QA testing, Performance optimization, Security audit, App Store / Play Store submission, Go-live</td>
+                <td><span class="priority-tag critical">Critical</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TOTAL ESTIMATED TIMELINE WRAPPER -->
+    <div class="timeline-summary">
+        Total Estimated Timeline: <strong>22 Weeks (approx. 5.5 months)</strong>
+    </div>
+
+    <!-- TECH MILESTONES SUMMARY LIST -->
+    <div class="milestones-title">Tech Milestones:</div>
+    <ul class="milestones-spec-list">
+        <li><strong>Week 2:</strong> Auth flow working end-to-end</li>
+        <li><strong>Week 6:</strong> First AI Match results generated</li>
+        <li><strong>Week 10:</strong> Full lead lifecycle (Post &rarr; Convert)</li>
+        <li><strong>Week 14:</strong> Chat live with E2EE</li>
+        <li><strong>Week 18:</strong> Payments processing live</li>
+        <li><strong>Week 22:</strong> Production deployment complete</li>
+    </ul>
+</section>
+
+<!-- MODULE 14: LEGAL NOTICE -->
+<section class="legal-module-container">
+    <div class="legal-main-header">14. LEGAL NOTICE</div>
+    
+    <!-- DESIGN BOUNDS DISCLAIMER WRAPPER CARD -->
+    <div class="legal-notice-box">
+        <p>
+            BWNNext (Business World Networking) is an independent platform developed and owned by OZOCO Global Pvt Ltd. 
+            This platform is not affiliated with, endorsed by, or connected to any other business networking organization or brand. 
+            All product names, features, branding, and design elements are original works created by OZOCO Global Pvt Ltd. 
+            Any resemblance to other platforms is coincidental. All content in this document is confidential and 
+            intended solely for the development team. Unauthorized reproduction or distribution is prohibited.
+        </p>
+    </div>
+
+    <!-- DOCUMENT BASELINE METADATA FOOTER -->
+    <footer class="legal-document-footer">
+        <div class="footer-left">OZOCO Global Pvt Ltd</div>
+        <div class="footer-center">BWNNext v1.0</div>
+        <div class="footer-right">Confidential &mdash; 2025</div>
+    </footer>
+</section>

@@ -1,0 +1,2711 @@
+/* Main layout wrapper matching SRS page widths */
+.srs-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Header Section Design */
+.srs-section-header {
+    background-color: #002244; /* Custom deep navy from document headers */
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Text Element Styling */
+.srs-container h3 {
+    color: #0b3c5d;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.srs-container p {
+    color: #333333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================
+   PRODUCT OVERVIEW SPECIFICATION TABLE
+   ========================================== */
+
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 2.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* First Column: Technical labels */
+.overview-table td:first-child {
+    width: 30%;
+    background-color: #edf4f9; /* Soft tech grey-blue blend */
+    color: #002244;
+    font-weight: 600;
+    padding: 14px 18px;
+    border: 1px solid #dcdcdc;
+}
+
+/* Second Column: Value content data */
+.overview-table td:last-child {
+    width: 70%;
+    background-color: #ffffff;
+    color: #555555;
+    padding: 14px 18px;
+    border: 1px solid #dcdcdc;
+}
+
+/* Hover feedback row enhancement */
+.overview-table tr:hover td {
+    background-color: #f7fafc;
+}
+
+/* ==========================================
+   PROJECT SCOPE LIST SYSTEM
+   ========================================== */
+
+.scope-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.scope-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* Custom crisp technical bullet implementation */
+.scope-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #328cc1; /* Accent blue highlight color */
+    font-size: 1.2rem;
+    top: -2px;
+}/* Main wrapper container */
+.roles-section-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Section main title banner */
+.roles-main-header {
+    background-color: #002244; /* Dark corporate navy banner tint */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Master Grid Table Layout */
+.user-roles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Header Cells styling */
+.user-roles-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Standard Body Cells padding and layout alignment */
+.user-roles-table td {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: top;
+}
+
+/* Column 1: Role Names (Aligns with your photo setup) */
+.user-roles-table td:nth-child(1) {
+    width: 25%;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Column 2: Descriptions */
+.user-roles-table td:nth-child(2) {
+    width: 50%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Column 3: Access Level badges */
+.user-roles-table td:nth-child(3) {
+    width: 25%;
+    text-align: left;
+    color: #4a5568;
+}
+
+/* Alternating zebra stripe row effect matching your code */
+.user-roles-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Responsive breakpoint fallback */
+@media (max-width: 600px) {
+    .user-roles-table, 
+    .user-roles-table tbody, 
+    .user-roles-table tr, 
+    .user-roles-table td {
+        display: block;
+        width: 100% !important;
+    }
+    .user-roles-table th {
+        display: none; /* Hide headers on small mobile viewports */
+    }
+    .user-roles-table td {
+        border-bottom: none;
+        position: relative;
+        padding-left: 40%;
+    }
+}/* Main wrapper container */
+.roles-section-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Section main title banner */
+.roles-main-header {
+    background-color: #002244; /* Dark corporate navy banner tint */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Master Grid Table Layout */
+.user-roles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Header Cells styling */
+.user-roles-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Standard Body Cells padding and layout alignment */
+.user-roles-table td {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: top;
+}
+
+/* Column 1: Role Names (Aligns with your photo setup) */
+.user-roles-table td:nth-child(1) {
+    width: 25%;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Column 2: Descriptions */
+.user-roles-table td:nth-child(2) {
+    width: 50%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Column 3: Access Level badges */
+.user-roles-table td:nth-child(3) {
+    width: 25%;
+    text-align: left;
+    color: #4a5568;
+}
+
+/* Alternating zebra stripe row effect matching your code */
+.user-roles-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Responsive breakpoint fallback */
+@media (max-width: 600px) {
+    .user-roles-table, 
+    .user-roles-table tbody, 
+    .user-roles-table tr, 
+    .user-roles-table td {
+        display: block;
+        width: 100% !important;
+    }
+    .user-roles-table th {
+        display: none; /* Hide headers on small mobile viewports */
+    }
+    .user-roles-table td {
+        border-bottom: none;
+        position: relative;
+        padding-left: 40%;
+    }
+}/* Main section container wrapper */
+.modules-section-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (3. USER MODULES) */
+.modules-main-header {
+    background-color: #002244; /* Dark corporate navy banner */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Subsection Text Heading (3.1 Registration & Login) */
+.modules-section-container h3 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Supported Methods Header Text */
+.methods-title {
+    color: #0099b8; /* Bright teal-cyan blue for section label */
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+/* ==========================================
+   AUTHENTICATION METHODS FLOW TABLE
+   ========================================== */
+
+.auth-methods-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Table Header Row Setup */
+.auth-methods-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal table cell styling */
+.auth-methods-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Column 1: Auth Method Titles */
+.auth-methods-table td:nth-child(1) {
+    width: 25%;
+    text-align: left;
+    color: #333333;
+}
+
+/* Column 2: System Flow Arrows / Details */
+.auth-methods-table td:nth-child(2) {
+    width: 50%;
+    text-align: left;
+    color: #2d3748;
+}
+
+/* Column 3: Flow Category Notes */
+.auth-methods-table td:nth-child(3) {
+    width: 25%;
+    text-align: left;
+    color: #4a5568;
+}
+
+/* Alternating zebra background matching your code rules */
+.auth-methods-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* ==========================================
+   SECURITY REQUIREMENTS TEXT AREA
+   ========================================== */
+
+/* Requirements Container Section Heading */
+.security-title {
+    color: #00a699; /* Emerald/Teal header tone */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Security Specifications List Structure */
+.security-req-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.security-req-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Clean customized disc bullet styling */
+.security-req-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+/* ==========================================
+   MODULE 3.2: PROFILE MANAGEMENT STYLES
+   ========================================== */
+
+/* Layout baseline block matching parent sheets */
+.profile-matrix-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Heading style for the 3.2 subsection */
+.subsection-header {
+    color: #002244;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #328cc1;
+    padding-bottom: 6px;
+}
+
+/* Specification Grid Table Structure */
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Header Columns */
+.matrix-table th {
+    background-color: #002244; /* Dark corporate navy banner */
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Table Body Matrix Cells */
+.matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #4a5568; /* Default technical grey text */
+    vertical-align: middle;
+}
+
+/* Target Layout Width Split Configurations */
+.matrix-table th:nth-child(1), .matrix-table td:nth-child(1) { width: 25%; }
+.matrix-table th:nth-child(2), .matrix-table td:nth-child(2) { width: 20%; }
+.matrix-table th:nth-child(3), .matrix-table td:nth-child(3) { width: 15%; }
+.matrix-table th:nth-child(4), .matrix-table td:nth-child(4) { width: 40%; }
+
+/* Column 1: Specific field identifiers */
+.matrix-table .field-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 3: Contextual visibility indicators */
+.matrix-table .req-yes {
+    color: #2b6cb0; /* Highlighted blue accent for required fields */
+    font-weight: 500;
+}
+
+.matrix-table .req-no {
+    color: #718096;
+}
+
+/* Column 4: Validation Rule Strings */
+.matrix-table .validation-note {
+    color: #4a5568;
+}
+
+/* Alternate Row Zebra stripe rule effect */
+.matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Hover row layer feed state */
+.matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 3.3: AI SMART MATCH ENGINE STYLES
+   ========================================== */
+
+/* Main section card structure */
+.match-engine-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Greenish-cyan title for Algorithm Logic */
+.logic-title {
+    color: #00a699; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Sub-text paragraph description */
+.logic-intro {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   ALGORITHM WEIGHTS MATRIX TABLE
+   ========================================== */
+
+.match-algorithm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Table Header Columns */
+.match-algorithm-table th {
+    background-color: #002244; /* Dark corporate navy banner */
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Base structural layout for inner matrix cells */
+.match-algorithm-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Exact text alignment and column widths */
+.match-algorithm-table td:nth-child(1) { width: 30%; text-align: left; }
+.match-algorithm-table td:nth-child(2) { width: 20%; text-align: left; }
+.match-algorithm-table td:nth-child(3) { width: 50%; text-align: left; }
+
+/* Column 1: Signal properties */
+.match-algorithm-table .signal-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 2: Weight layout percentage strings */
+.match-algorithm-table .weight-value {
+    color: #2b6cb0; /* Highlighted blue text matching table columns */
+    font-weight: 500;
+}
+
+/* Alternating table zebra striping layout */
+.match-algorithm-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* ==========================================
+   ENGINE OUTPUT SYSTEM LIST
+   ========================================== */
+
+/* Greenish-cyan title for Output label */
+.output-title {
+    color: #00a699;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Specifications dot-grid listing framework */
+.output-spec-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.output-spec-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Clean customized circular disc marker style */
+.output-spec-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+/* ==========================================
+   MODULE 3.4: SMART LEAD SYSTEM STYLES
+   ========================================== */
+
+/* Component card block base */
+.leads-system-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Feature header sub-text styling */
+.leads-intro {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Heading for actions block element label */
+.actions-title {
+    color: #0099b8; /* Cyan/Teal accent highlight color */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem 0;
+}
+
+/* ==========================================
+   LEADS CONFIGURATION & ACTION CORE TABLES
+   ========================================== */
+
+.leads-config-table,
+.leads-actions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Table Headers setup structure */
+.leads-config-table th,
+.leads-actions-table th {
+    background-color: #002244; /* Dark corporate navy banner */
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Row-level cell sizing rules */
+.leads-config-table td,
+.leads-actions-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Width allocations split metrics */
+.leads-config-table th:nth-child(1), .leads-config-table td:nth-child(1) { width: 33.33%; }
+.leads-config-table th:nth-child(2), .leads-config-table td:nth-child(2) { width: 33.33%; }
+.leads-config-table th:nth-child(3), .leads-config-table td:nth-child(3) { width: 33.33%; }
+
+.leads-actions-table th:nth-child(1), .leads-actions-table td:nth-child(1) { width: 30%; }
+.leads-actions-table th:nth-child(2), .leads-actions-table td:nth-child(2) { width: 45%; }
+.leads-actions-table th:nth-child(3), .leads-actions-table td:nth-child(3) { width: 25%; }
+
+/* Typography variants for critical data properties */
+.field-name, .action-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.req-yes {
+    color: #2b6cb0;
+    font-weight: 500;
+}
+
+.req-no {
+    color: #718096;
+}
+
+/* Alternate row zebra striping layout */
+.leads-config-table tbody tr:nth-child(even),
+.leads-actions-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Hover feedback states background rule */
+.leads-config-table tbody tr:hover,
+.leads-actions-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   CONTEXTUAL STATUS CHANGE BADGE SYSTEM
+   ========================================== */
+
+.status-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-tag.active { background-color: #e6fffa; color: #00a389; border: 1px solid #b2f5ea; }
+.status-tag.interested { background-color: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
+.status-tag.progress { background-color: #fefcbf; color: #b7791f; border: 1px solid #fef08a; }
+.status-tag.converted { background-color: #f0fff4; color: #38a169; border: 1px solid #c6f6d5; }
+.status-tag.closed { background-color: #edf2f7; color: #4a5568; border: 1px solid #e2e8f0; }
+/* ==========================================
+   MODULE 3.5: BUSINESS CIRCLES STYLES
+   ========================================== */
+
+/* Main component layout container card */
+.business-circles-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Feature subtitle text formatting */
+.circles-intro {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   CIRCLES FEATURE SPECIFICATION TABLE
+   ========================================== */
+
+.circles-feature-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Corporate deep navy header cells */
+.circles-feature-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Standard baseline cell structure */
+.circles-feature-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Explicit table column scale definitions */
+.circles-feature-table th:nth-child(1), 
+.circles-feature-table td:nth-child(1) { 
+    width: 35%; 
+}
+
+.circles-feature-table th:nth-child(2), 
+.circles-feature-table td:nth-child(2) { 
+    width: 65%; 
+}
+
+/* Column 1: Feature label accents */
+.circles-feature-table .feature-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Alternating zebra grid background configurations */
+.circles-feature-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Hover feedback action rows */
+.circles-feature-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 3.6: GROWTH SESSIONS (EVENTS) STYLES
+   ========================================== */
+
+/* Main section component layout wrapper block */
+.events-session-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Data Specification Matrix Table rules */
+.events-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Corporate dark navy banner layout headers */
+.events-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Base cell inner matrix lines layout */
+.events-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Strict width allocations matching setup specs */
+.events-matrix-table th:nth-child(1), .events-matrix-table td:nth-child(1) { width: 33.33%; }
+.events-matrix-table th:nth-child(2), .events-matrix-table td:nth-child(2) { width: 33.33%; }
+.events-matrix-table th:nth-child(3), .events-matrix-table td:nth-child(3) { width: 33.33%; }
+
+/* Column typography text states customization */
+.events-matrix-table .field-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.events-matrix-table .req-yes {
+    color: #2b6cb0;
+    font-weight: 500;
+}
+
+.events-matrix-table .req-no {
+    color: #718096;
+}
+
+/* Alternating matrix zebra lines config block */
+.events-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+.events-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   INLINE INVENTORY ACTION LABELS SYSTEM
+   ========================================== */
+
+/* Footer wrapper bar for the event actions list */
+.event-actions-wrapper {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Heading action label bold tag styling */
+.event-actions-wrapper .actions-label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-right: 4px;
+}
+
+/* Interactive flow steps item highlights */
+.event-actions-wrapper .action-item {
+    color: #2b6cb0; /* Project interactive blue layout color */
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* Split layout pipe separator markers decoration */
+.event-actions-wrapper .action-divider {
+    color: #cbd5e1;
+    font-weight: 300;
+    user-select: none;
+}
+/* ==========================================
+   MODULE 3.7: CHAT SYSTEM STYLES
+   ========================================== */
+
+/* Component container blueprint matching parent modules */
+.chat-system-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Feature Table Base Properties */
+.chat-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Deep corporate navy header cells */
+.chat-specs-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Standard baseline interior cell grid formatting */
+.chat-specs-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Explicit table column size definitions */
+.chat-specs-table th:nth-child(1), 
+.chat-specs-table td:nth-child(1) { 
+    width: 35%; 
+}
+
+.chat-specs-table th:nth-child(2), 
+.chat-specs-table td:nth-child(2) { 
+    width: 65%; 
+}
+
+/* Column 1: Feature identifiers */
+.chat-specs-table .feature-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Alternating zebra grid background configurations */
+.chat-specs-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Row-level cursor hover feedback layout states */
+.chat-specs-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   MESSAGE STATUS CHECK VALUE SYSTEM
+   ========================================== */
+
+/* Basic typographic structure for check marks */
+.status-tick {
+    font-family: Arial, sans-serif;
+    color: #a0aec0; /* Standard light-gray tone for Sent/Delivered states */
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Distinct Blue Read status marker class */
+.status-tick.read {
+    color: #3182ce; /* Project dynamic blue highlight rule */
+}
+/* ==========================================
+   MODULE 3.8: DASHBOARD & ANALYTICS STYLES
+   ========================================== */
+
+/* Main component layout block */
+.analytics-dashboard-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Specific analytics specification data grid */
+.analytics-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Deep corporate navy header blocks */
+.analytics-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text properties and cell lines padding */
+.analytics-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Matrix layout column split metrics */
+.analytics-matrix-table th:nth-child(1), .analytics-matrix-table td:nth-child(1) { width: 30%; }
+.analytics-matrix-table th:nth-child(2), .analytics-matrix-table td:nth-child(2) { width: 45%; }
+.analytics-matrix-table th:nth-child(3), .analytics-matrix-table td:nth-child(3) { width: 25%; }
+
+/* Column 1: Core metric properties names */
+.analytics-matrix-table .metric-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 3: Component visualization types values */
+.analytics-matrix-table .display-type {
+    color: #4a5568;
+}
+
+/* Special distinct visual emphasis layer rule for dynamic fields */
+.analytics-matrix-table .font-trend {
+    color: #2b6cb0; /* Accent interactive blue highlight text */
+}
+
+/* Alternating table rows background zebra colors configuration */
+.analytics-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction hover overlay state layout lines */
+.analytics-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 3.9: TRUST SCORE SYSTEM STYLES
+   ========================================== */
+
+/* Component container base card structure */
+.trust-system-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Feature overview description typography */
+.trust-intro {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   POINTS SPECIFICATION GRID MATRIX TABLE
+   ========================================== */
+
+.trust-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Corporate dark navy title header styling */
+.trust-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Base interior cells box lines formatting */
+.trust-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Core columns split metric proportions width */
+.trust-matrix-table th:nth-child(1), .trust-matrix-table td:nth-child(1) { width: 30%; }
+.trust-matrix-table th:nth-child(2), .trust-matrix-table td:nth-child(2) { width: 20%; }
+.trust-matrix-table th:nth-child(3), .trust-matrix-table td:nth-child(3) { width: 50%; }
+
+/* Column 1: Component row items */
+.trust-matrix-table .component-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 2: Numerical max points string values */
+.trust-matrix-table .points-value {
+    color: #2b6cb0; /* Accent crisp project blue text highlight */
+    font-weight: 500;
+}
+
+/* Alternate row zebra line colors config */
+.trust-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+.trust-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   TRUST DISPLAY RULES & TIERS SYSTEM
+   ========================================== */
+
+/* Specification listing configurations */
+.trust-rules-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.trust-rules-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Standard crisp square/circular dot listing marker hook */
+.trust-rules-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+
+/* Inline flex alignment layout configuration for the tier groups */
+.tier-badges-inline {
+    display: inline-flex;
+    gap: 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+/* Base parameters setup framework for metadata score badges */
+.badge-tier {
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Contextual background palette variations matching professional scales */
+.badge-tier.bronze { background-color: #f0e4dc; color: #a05a2c; border: 1px solid #ddc7b8; }
+.badge-tier.silver { background-color: #e2e8f0; color: #4a5568; border: 1px solid #cbd5e1; }
+.badge-tier.gold { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+/* ==========================================
+   MODULE 4: SUBSCRIPTION MODULE STYLES
+   ========================================== */
+
+/* Main section module container wrapper block */
+.subscription-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (4. SUBSCRIPTION MODULE) */
+.subscription-main-header {
+    background-color: #002244; /* Dark corporate navy banner */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   TIER COMPARISON SPECIFICATION MATRIX TABLE
+   ========================================== */
+
+.subscription-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Table Header Row Layout */
+.subscription-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Center-align tier headings for better structure visualization */
+.subscription-matrix-table th:nth-child(2),
+.subscription-matrix-table th:nth-child(3),
+.subscription-matrix-table th:nth-child(4) {
+    text-align: left;
+}
+
+/* Interior block cells lines alignment formatting */
+.subscription-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid four-column width splitting metric properties */
+.subscription-matrix-table th:nth-child(1), .subscription-matrix-table td:nth-child(1) { width: 28%; }
+.subscription-matrix-table th:nth-child(2), .subscription-matrix-table td:nth-child(2) { width: 24%; }
+.subscription-matrix-table th:nth-child(3), .subscription-matrix-table td:nth-child(3) { width: 24%; }
+.subscription-matrix-table th:nth-child(4), .subscription-matrix-table td:nth-child(4) { width: 24%; }
+
+/* Column 1: Feature identifiers style */
+.subscription-matrix-table .feature-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Highlighted Elite tier features text values system */
+.subscription-matrix-table .highlight-tier-val {
+    color: #2b6cb0; /* Accent clean project blue text tier color */
+    font-weight: 500;
+}
+
+/* Alternate row zebra line table colors configuration block */
+.subscription-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction hover overlay state layout lines */
+.subscription-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   PAYMENT SPECIFICATIONS BULLET LIST
+   ========================================== */
+
+/* Greenish-cyan sub-title label for payment options */
+.payment-title {
+    color: #00a699; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Dot listing framework details */
+.payment-spec-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.payment-spec-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Crisp technical circular disc text list marker bullet */
+.payment-spec-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+/* ==========================================
+   MODULE 5: NOTIFICATION SYSTEM STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.notification-system-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (5. NOTIFICATION SYSTEM) */
+.notification-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   TRIGGER SPECIFICATION CORE MATRIX TABLE
+   ========================================== */
+
+.notification-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.notification-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.notification-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid width splitting properties for columns matrix */
+.notification-matrix-table th:nth-child(1), .notification-matrix-table td:nth-child(1) { width: 33%; }
+.notification-matrix-table th:nth-child(2), .notification-matrix-table td:nth-child(2) { width: 27%; }
+.notification-matrix-table th:nth-child(3), .notification-matrix-table td:nth-child(3) { width: 40%; }
+
+/* Column 1: Core triggering system action events style */
+.notification-matrix-table .event-title {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 2: System delivery channels distribution category metadata */
+.notification-matrix-table .channel-type {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Column 3: Raw response string template mockup placeholders format */
+.notification-matrix-table .template-string {
+    color: #4a5568;
+    font-style: normal;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.notification-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction hover overlay responsive focus bounds rows */
+.notification-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 6: SUPPORT SYSTEM STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.support-system-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (6. SUPPORT SYSTEM) */
+.support-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   SUPPORT SYSTEM CORE MATRIX TABLE
+   ========================================== */
+
+.support-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.support-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.support-matrix-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid width splitting properties for columns matrix */
+.support-matrix-table th:nth-child(1), .support-matrix-table td:nth-child(1) { width: 30%; }
+.support-matrix-table th:nth-child(2), .support-matrix-table td:nth-child(2) { width: 45%; }
+.support-matrix-table th:nth-child(3), .support-matrix-table td:nth-child(3) { width: 25%; }
+
+/* Column 1: Support channel categories text style */
+.support-matrix-table .support-type {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 3: Service Level Agreement (SLA) response criteria */
+.support-matrix-table .sla-value {
+    color: #4a5568;
+}
+
+/* Special priority highlight for urgent SLA response timelines (e.g. Chat) */
+.support-matrix-table .highlight-sla {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Muted style variant for self-driven automated support items */
+.support-matrix-table .self-service {
+    color: #718096;
+    font-style: italic;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.support-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.support-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 7: ADMIN MODULE STYLES
+   ========================================== */
+
+/* Main administrative component container card block wrapper */
+.admin-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (7. ADMIN MODULE) */
+.admin-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Subsection Text Headings (7.1, 7.2, 7.3, 7.4) */
+.admin-module-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.25rem 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ==========================================
+   ADMIN SPECIFICATION TABLES (KPIs & MGMT)
+   ========================================== */
+
+.admin-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Corporate deep navy header cell structures */
+.admin-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal interior box cell grid layout borders */
+.admin-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Two-column structural grid layout size splitting allocations */
+.admin-matrix-table th:nth-child(1), .admin-matrix-table td:nth-child(1) { width: 35%; }
+.admin-matrix-table th:nth-child(2), .admin-matrix-table td:nth-child(2) { width: 65%; }
+
+/* Column typography accents variants */
+.admin-field-name {
+    color: #2b6cb0; /* Highlighted project blue text tint variant */
+    font-weight: 500;
+}
+
+.admin-action-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Alternating matrix zebra line background rules configuration */
+.admin-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction layout row cursor hover feedback state */
+.admin-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   AUDITING & MONITORING SYSTEM SPEC LISTS
+   ========================================== */
+
+/* Technical dot-grid list block layout */
+.admin-spec-list {
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 2rem;
+}
+
+.admin-spec-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Clean circular disk listing text marker system */
+.admin-spec-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+/* ==========================================
+   MODULE 8: TECHNOLOGY STACK STYLES
+   ========================================== */
+
+/* Main architecture component card wrapper block layout */
+.tech-stack-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (8. TECHNOLOGY STACK) */
+.tech-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   ARCHITECTURE LAYER METRICS TABLE
+   ========================================== */
+
+.tech-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Corporate deep navy header cells */
+.tech-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.tech-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise three-column grid width splitting proportions */
+.tech-matrix-table th:nth-child(1), .tech-matrix-table td:nth-child(1) { width: 25%; }
+.tech-matrix-table th:nth-child(2), .tech-matrix-table td:nth-child(2) { width: 35%; }
+.tech-matrix-table th:nth-child(3), .tech-matrix-table td:nth-child(3) { width: 40%; }
+
+/* Column 1: Core layer structural block tags */
+.tech-matrix-table .tech-layer-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Distinct visual emphasis layer rule for core back-end server elements */
+.tech-matrix-table .highlight-tech-val {
+    color: #2b6cb0; /* Accent interactive blue highlight text */
+    font-weight: 500;
+}
+
+/* Alternating table rows background zebra colors configuration */
+.tech-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction hover overlay responsive focus bounds rows */
+.tech-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 9: API & INTEGRATIONS STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.api-integrations-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (9. API & INTEGRATIONS) */
+.api-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Subsection Text Headings (9.1, 9.2) */
+.api-integrations-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.25rem 0;
+}
+
+/* ==========================================
+   INTEGRATIONS & ENDPOINTS MATRIX TABLES
+   ========================================== */
+
+.integrations-matrix-table,
+.endpoints-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Table Header Columns configuration layout */
+.integrations-matrix-table th,
+.endpoints-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.integrations-matrix-table td,
+.endpoints-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise width splitting metrics */
+.integrations-matrix-table th:nth-child(1), .integrations-matrix-table td:nth-child(1) { width: 25%; }
+.integrations-matrix-table th:nth-child(2), .integrations-matrix-table td:nth-child(2) { width: 20%; }
+.integrations-matrix-table th:nth-child(3), .integrations-matrix-table td:nth-child(3) { width: 30%; }
+.integrations-matrix-table th:nth-child(4), .integrations-matrix-table td:nth-child(4) { width: 25%; }
+
+.endpoints-matrix-table th:nth-child(1), .endpoints-matrix-table td:nth-child(1) { width: 15%; }
+.endpoints-matrix-table th:nth-child(2), .endpoints-matrix-table td:nth-child(2) { width: 40%; }
+.endpoints-matrix-table th:nth-child(3), .endpoints-matrix-table td:nth-child(3) { width: 45%; }
+
+/* Column typography accents */
+.tech-label-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.endpoint-path {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #1a202c;
+    background-color: #f7fafc;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.integrations-matrix-table tbody tr:nth-child(even),
+.endpoints-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.integrations-matrix-table tbody tr:hover,
+.endpoints-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   HTTP REQUEST METHOD BADGE SYSTEM
+   ========================================== */
+
+.method-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    min-width: 55px;
+    letter-spacing: 0.5px;
+}
+
+/* REST Method specific code color parameters */
+.method-badge.post {
+    background-color: #e6fffa;
+    color: #00a389;
+    border: 1px solid #b2f5ea;
+}
+
+.method-badge.get {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    border: 1px solid #bee3f8;
+}
+
+.method-badge.put {
+    background-color: #fffaf0;
+    color: #dd6b20;
+    border: 1px solid #feebc8;
+}
+/* ==========================================
+   MODULE 10: DATABASE SCHEMA STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.schema-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (10. DATABASE SCHEMA) */
+.schema-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Subsection Text Heading (10.1 Users Collection) */
+.schema-module-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.25rem 0;
+}
+
+/* Collection name metadata container label */
+.collection-meta {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1.25rem;
+}
+
+.meta-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #2d3748;
+    background-color: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   SCHEMA PROPERTIES DATA MATRIX TABLE
+   ========================================== */
+
+.schema-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.schema-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.schema-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid width splitting properties for columns matrix */
+.schema-matrix-table th:nth-child(1), .schema-matrix-table td:nth-child(1) { width: 30%; }
+.schema-matrix-table th:nth-child(2), .schema-matrix-table td:nth-child(2) { width: 25%; }
+.schema-matrix-table th:nth-child(3), .schema-matrix-table td:nth-child(3) { width: 45%; }
+
+/* Column 1: Database key identifiers in technical monospace format */
+.schema-matrix-table .schema-field-key {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+/* Column 2: Data types visualization values */
+.schema-matrix-table .schema-type-val {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.schema-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.schema-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   SECTION 10.2: LEADS COLLECTION STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.leads-schema-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Note: This block naturally shares `.schema-matrix-table`, `.schema-field-key`, */
+/* and `.schema-type-val` formatting rules established in Section 10.1 */
+/* ==========================================
+   SECTION 10.3: OTHER KEY COLLECTIONS STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.other-collections-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Summary Layout Table Base Properties */
+.collections-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Row Layout configuration */
+.collections-summary-table th {
+    background-color: #002244; /* Corporate deep navy header cells */
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal interior box cell grid layout padding */
+.collections-summary-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Explicit two-column grid split proportions */
+.collections-summary-table th:nth-child(1), .collections-summary-table td:nth-child(1) { width: 30%; }
+.collections-summary-table th:nth-child(2), .collections-summary-table td:nth-child(2) { width: 70%; }
+
+/* Column 1: Monospace database collection names layout formatting */
+.collections-summary-table .collection-name-cell {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Column 2: Code properties string list format */
+.collections-summary-table .fields-list-cell {
+    font-family: 'Courier New', Courier, monospace;
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.collections-summary-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover focus bounds overlay */
+.collections-summary-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 11: NON-FUNCTIONAL REQUIREMENTS
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.nfr-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (11. NON-FUNCTIONAL REQUIREMENTS) */
+.nfr-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   REQUIREMENTS SPECIFICATION DATA MATRIX TABLE
+   ========================================== */
+
+.nfr-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.nfr-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.nfr-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid width splitting properties for columns matrix */
+.nfr-matrix-table th:nth-child(1), .nfr-matrix-table td:nth-child(1) { width: 25%; }
+.nfr-matrix-table th:nth-child(2), .nfr-matrix-table td:nth-child(2) { width: 45%; }
+.nfr-matrix-table th:nth-child(3), .nfr-matrix-table td:nth-child(3) { width: 30%; }
+
+/* Column 1: Core category label tags style */
+.nfr-matrix-table .nfr-category-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 3: Raw response metrics target value strings format */
+.nfr-matrix-table .nfr-target-val {
+    color: #4a5568;
+}
+
+/* Special distinct visual emphasis layer rule for security protocols */
+.nfr-matrix-table .highlight-nfr-val {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.nfr-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.nfr-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   MODULE 12: UI DESIGN SPECIFICATION STYLES
+   ========================================== */
+
+/* Main style guide layout section card wrapper block */
+.ui-spec-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (12. UI DESIGN SPECIFICATION) */
+.ui-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* Subsection Text Heading (12.1 Brand Identity) */
+.ui-spec-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.25rem 0;
+}
+
+/* ==========================================
+   DESIGN SYSTEMS MATRIX CONFIGURATION TABLE
+   ========================================== */
+
+.ui-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.ui-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.ui-matrix-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid width splitting properties for design tokens columns */
+.ui-matrix-table th:nth-child(1), .ui-matrix-table td:nth-child(1) { width: 25%; }
+.ui-matrix-table th:nth-child(2), .ui-matrix-table td:nth-child(2) { width: 35%; }
+.ui-matrix-table th:nth-child(3), .ui-matrix-table td:nth-child(3) { width: 40%; }
+
+/* Column 1: Core design layout structural elements style text */
+.ui-matrix-table .ui-element-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Column 2: Exact programming hex values code format properties */
+.ui-matrix-table .hex-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #1a202c;
+    background-color: #f7fafc;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Typographic font asset highlight values system tag */
+.ui-matrix-table .font-spec-value {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.ui-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.ui-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   INLINE VISUAL ACCENT COLOR PREVIEW PILLS
+   ========================================== */
+
+.color-preview-pill {
+    display: inline-block;
+    width: 24px;
+    height: 14px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+/* ==========================================
+   SECTION 12.2: SCREEN INVENTORY STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.inventory-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Subsection Text Heading (12.2 Screen Inventory) */
+.inventory-module-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1rem 0 1.25rem 0;
+}
+
+/* ==========================================
+   INVENTORY CATALOG SYSTEM TABLE
+   ========================================== */
+
+.inventory-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Table Header Columns configuration layout */
+.inventory-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal cell line structure padding metrics */
+.inventory-matrix-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Grid layout size splitting distributions for catalog properties */
+.inventory-matrix-table th:nth-child(1), .inventory-matrix-table td:nth-child(1) { width: 8%; }
+.inventory-matrix-table th:nth-child(2), .inventory-matrix-table td:nth-child(2) { width: 32%; }
+.inventory-matrix-table th:nth-child(3), .inventory-matrix-table td:nth-child(3) { width: 60%; }
+
+/* Column 1: Index tracking sequential numbers styling */
+.inventory-matrix-table .seq-num {
+    color: #718096;
+    font-weight: 500;
+}
+
+/* Column 2: Screen structural interface block tag */
+.inventory-matrix-table .screen-name {
+    color: #2b6cb0; /* Project interactive blue text layout color accent */
+    font-weight: 500;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.inventory-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.inventory-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+/* ==========================================
+   SECTION 12.3: NAVIGATION STRUCTURE STYLES
+   ========================================== */
+
+/* Main style guide layout section card wrapper block */
+.nav-structure-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Subsection Text Heading (12.3 Navigation Structure) */
+.nav-structure-container .subsection-header {
+    color: #002244;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1rem 0 1.25rem 0;
+}
+
+.nav-spec-details p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.spacing-top {
+    margin-top: 2.5rem;
+}
+
+/* ==========================================
+   MOBILE BOTTOM NAVIGATION COMPONENT
+   ========================================== */
+
+.mobile-nav-preview {
+    max-width: 400px;
+    background-color: #f0f4f8;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    margin: 0 auto;
+}
+
+.bottom-nav-bar {
+    display: flex;
+    background-color: #0b1f45; /* Brand Deep Navy */
+    border-radius: 30px;
+    padding: 8px 12px;
+    box-shadow: 0 8px 24px rgba(11, 31, 69, 0.2);
+    justify-content: space-around;
+}
+
+.nav-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #a0aec0;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+    gap: 4px;
+}
+
+.nav-tab i {
+    font-size: 1.15rem;
+}
+
+.nav-tab:hover, .nav-tab.active {
+    color: #00a896; /* Brand Accent Teal */
+}
+
+/* ==========================================
+   WEB SIDE DRAWER COMPONENT LAYOUT
+   ========================================== */
+
+.web-drawer-preview {
+    max-width: 260px;
+    background-color: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.side-drawer {
+    background-color: #0b1f45; /* Brand Deep Navy */
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 12px;
+}
+
+.toggle-icon {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #00a896;
+}
+
+.brand-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.drawer-links {
+    list-style: none;
+    margin-top: 0.75rem;
+    padding: 0 8px;
+}
+
+.drawer-links li {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    gap: 14px;
+}
+
+.drawer-links li i {
+    font-size: 1.05rem;
+    width: 20px;
+    text-align: center;
+}
+
+.drawer-links li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.drawer-links li.active {
+    background-color: #00a896; /* Brand Accent Teal */
+    color: #ffffff;
+    font-weight: 500;
+}
+/* ==========================================
+   MODULE 13: DEVELOPMENT PHASE PLAN STYLES
+   ========================================== */
+
+/* Main component layout section card wrapper block */
+.plan-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (13. DEVELOPMENT PHASE PLAN) */
+.plan-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   PHASE ROADMAP SPECIFICATION MATRIX TABLE
+   ========================================== */
+
+.plan-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Table Header Columns configuration layout */
+.plan-matrix-table th {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+}
+
+/* Universal text lines layout internal grid blocks cells */
+.plan-matrix-table td {
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Precise grid four-column width splitting properties */
+.plan-matrix-table th:nth-child(1), .plan-matrix-table td:nth-child(1) { width: 22%; }
+.plan-matrix-table th:nth-child(2), .plan-matrix-table td:nth-child(2) { width: 13%; }
+.plan-matrix-table th:nth-child(3), .plan-matrix-table td:nth-child(3) { width: 50%; }
+.plan-matrix-table th:nth-child(4), .plan-matrix-table td:nth-child(4) { width: 15%; }
+
+/* Column 1: Phase track headings properties */
+.plan-matrix-table .phase-title {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Alternate row zebra layer background colors rules config */
+.plan-matrix-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Micro-interaction row-level cursor hover feedback layout overlay */
+.plan-matrix-table tbody tr:hover {
+    background-color: #f0f4f8;
+}
+
+/* ==========================================
+   CONTEXTUAL ROADMAP PRIORITY BADGE SYSTEM
+   ========================================== */
+
+.priority-tag {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.priority-tag.critical { background-color: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
+.priority-tag.high { background-color: #fffaf0; color: #dd6b20; border: 1px solid #feebc8; }
+.priority-tag.medium { background-color: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
+
+/* ==========================================
+   TIMELINE WRAPPER & MILESTONES BULLET LIST
+   ========================================== */
+
+/* Teal-cyan summary header text */
+.timeline-summary {
+    color: #00a699; 
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.timeline-summary strong {
+    font-weight: 700;
+}
+
+/* Bright teal-cyan blue for section label */
+.milestones-title {
+    color: #0099b8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Specifications dot-grid listing framework */
+.milestones-spec-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.milestones-spec-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Clean customized circular disc marker style */
+.milestones-spec-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #333333;
+    font-size: 1.3rem;
+}
+
+.milestones-spec-list strong {
+    color: #2d3748;
+}
+/* ==========================================
+   MODULE 14: LEGAL NOTICE STYLES
+   ========================================== */
+
+/* Main administrative component container card block wrapper */
+.legal-module-container {
+    max-width: 1100px;
+    margin: 2.5rem auto 5rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcdc;
+}
+
+/* Document Level 1 Header Banner (14. LEGAL NOTICE) */
+.legal-main-header {
+    background-color: #002244; /* Dark corporate navy banner background */
+    color: #ffffff;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2.5rem;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   TEAL ENCLOSED NOTICE CARD FRAME SYSTEM
+   ========================================== */
+
+.legal-notice-box {
+    border: 2px solid #00a896; /* Brand Accent Teal crisp bounding box */
+    border-radius: 6px;
+    padding: 2rem;
+    background-color: #ffffff;
+    margin-bottom: 4rem;
+}
+
+.legal-notice-box p {
+    font-size: 0.98rem;
+    color: #4a5568; /* Dark grey typography text */
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ==========================================
+   DOCUMENTATION PAGE LEVEL SEGMENT FOOTER
+   ========================================== */
+
+.legal-document-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #718096; /* Light metadata grey tint text */
+    font-weight: 500;
+}
+
+.legal-document-footer .footer-left {
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.legal-document-footer .footer-center {
+    letter-spacing: 0.5px;
+}
+
+.legal-document-footer .footer-right {
+    font-variant-numeric: tabular-nums;
+}
